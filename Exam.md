@@ -28,7 +28,9 @@ Not a lot of useful information is gained from the scatter plot.
 
 Only predicting log(rent) on green_rating, we can see the rent higher for green building.
 
-···
+
+
+
 Call:
 lm(formula = Rent ~ green_rating, data = df_green)
 
@@ -46,7 +48,8 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 15.13 on 7677 degrees of freedom
 Multiple R-squared:  0.0008882,	Adjusted R-squared:  0.000758 
 F-statistic: 6.825 on 1 and 7677 DF,  p-value: 0.009009
-···
+
+
 
 ···
 Call:
@@ -97,8 +100,6 @@ Based on stats guru, the size is 250000, greater than the mean, so the extra rev
 Notes: I tried to put multiple plots in one window ut it fails. I think it's becasue the bubble maps are interactive.
 
 #########################
-
-##
 
 # Portfolio Modeling
 
@@ -160,6 +161,39 @@ I dropped columns __photo_sharing__ and __religion__ because I think they ust be
 * __Spam_user__ group is the sum of __spam__ and __adult__.            
 
 * __Creative__ group is the sum of __crafts__ and __art__.
+
+···
+[1] "cluster1's column means"
+         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+        4.741313         3.667954         7.258687         3.471042         1.976834         2.980695         0.957529 
+        familish             shop            young        spam_user         creative          Cluster 
+        2.745174         2.787645         2.841699         9.081081         1.463320         1.000000 
+[1] "cluster2's column means"
+         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+       4.4550517       10.3516309       18.0994431        3.8774861        2.3070804        4.1575179        0.9244232 
+        familish             shop            young        spam_user         creative          Cluster 
+       2.3357200        2.5393795        2.5147176        0.1034208        1.1424025        2.0000000 
+[1] "cluster3's column means"
+         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+       3.9844009        2.9761286        4.1800993        2.1448830        1.3164736        1.6868353        0.5010636 
+        familish             shop            young        spam_user         creative          Cluster 
+       1.4055779        1.9619475        1.5892224        0.1011581        0.7161428        3.0000000 
+[1] "cluster4's column means"
+         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+       3.9578125        3.8687500        6.4703125        3.3687500        7.2312500        6.2093750        0.8734375 
+        familish             shop            young        spam_user         creative          Cluster 
+       7.6921875        3.4281250        4.5734375        0.1734375        1.7812500        4.0000000 
+[1] "cluster5's column means"
+         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+       6.2960630        4.3748031        7.7448819        4.1354331        2.1448819       11.4031496        1.2267717 
+        familish             shop            young        spam_user         creative          Cluster 
+       2.5496063       11.4771654        3.3259843        0.1480315        1.5653543        5.0000000 
+[1] "cluster6's column means"
+         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+       5.1790698        4.4441860        6.4953488       10.2372093        3.0581395        2.8081395        1.3011628 
+        familish             shop            young        spam_user         creative          Cluster 
+       2.3709302        3.1011628        9.5430233        0.1337209        3.2558140        6.0000000 
+···
 
 After running the KMeans clustering model and looking at the statistics of each cluster, there are 6 clusters I got.      
 
