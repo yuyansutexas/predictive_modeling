@@ -164,7 +164,8 @@ I dropped columns __photo_sharing__ and __religion__ because I think they ust be
 
 
 
-    [1] "cluster1's column means"
+
+    "cluster1's column means"
              chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
             4.741313         3.667954         7.258687         3.471042         1.976834         2.980695         0.957529 
             familish             shop            young        spam_user         creative          Cluster 
