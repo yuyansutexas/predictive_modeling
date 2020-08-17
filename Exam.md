@@ -31,23 +31,23 @@ Only predicting log(rent) on green_rating, we can see the rent higher for green 
 
 
 
-Call:
-lm(formula = Rent ~ green_rating, data = df_green)
+    Call:
+    lm(formula = Rent ~ green_rating, data = df_green)
 
-Residuals:
-    Min      1Q  Median      3Q     Max 
--25.465  -8.945  -3.245   5.735 221.555 
+    Residuals:
+        Min      1Q  Median      3Q     Max 
+    -25.465  -8.945  -3.245   5.735 221.555 
 
-Coefficients:
-              Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    28.4448     0.1809 157.214  < 2e-16 ***
-green_rating1   1.5837     0.6062   2.612  0.00901 ** 
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-Residual standard error: 15.13 on 7677 degrees of freedom
-Multiple R-squared:  0.0008882,	Adjusted R-squared:  0.000758 
-F-statistic: 6.825 on 1 and 7677 DF,  p-value: 0.009009
+    Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+    (Intercept)    28.4448     0.1809 157.214  < 2e-16 ***
+    green_rating1   1.5837     0.6062   2.612  0.00901 ** 
+    ---
+    Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+    
+    Residual standard error: 15.13 on 7677 degrees of freedom
+    Multiple R-squared:  0.0008882,	Adjusted R-squared:  0.000758 
+    F-statistic: 6.825 on 1 and 7677 DF,  p-value: 0.009009
 
 
 
