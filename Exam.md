@@ -99,7 +99,34 @@ Based on stats guru, the size is 250000, greater than the mean, so the extra rev
 
 Notes: I tried to put multiple plots in one window ut it fails. I think it's becasue the bubble maps are interactive.
 
-#########################
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_Mon.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_Tu.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_Wed.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_Th.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_F.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_Sat.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Arrive_Sun.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_Mon.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_Tu.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_Wed.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_Th.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_F.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_Sat.png)
+
+![Image text](https://github.com/yuyansutexas/predictive_modeling/blob/master/figures/Dep_Sun.png)
 
 # Portfolio Modeling
 
