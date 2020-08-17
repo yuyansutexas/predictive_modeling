@@ -30,7 +30,6 @@ Only predicting log(rent) on green_rating, we can see the rent higher for green 
 
 
 
-
     Call:
     lm(formula = Rent ~ green_rating, data = df_green)
 
@@ -51,47 +50,48 @@ Only predicting log(rent) on green_rating, we can see the rent higher for green 
 
 
 
-···
-Call:
-lm(formula = log(Rent) ~ . - class - size + log(size), data = df_green)
+    Call:
+    lm(formula = log(Rent) ~ . - class - size + log(size), data = df_green)
 
-Residuals:
-     Min       1Q   Median       3Q      Max 
--2.14746 -0.27248 -0.01354  0.26452  2.17619 
+    Residuals:
+         Min       1Q   Median       3Q      Max 
+    -2.14746 -0.27248 -0.01354  0.26452  2.17619 
 
-Coefficients:
+    Coefficients:
                 Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    3.1662434  0.0769267  41.159  < 2e-16 ***
-leasing_rate   0.0042604  0.0003037  14.028  < 2e-16 ***
-stories        0.0005393  0.0006349   0.849  0.39564    
-age           -0.0004789  0.0001835  -2.610  0.00908 ** 
-class_a1       0.3260747  0.0213849  15.248  < 2e-16 ***
-class_b1       0.1001355  0.0166718   6.006 1.98e-09 ***
-green_rating1 -0.0257949  0.0179865  -1.434  0.15158    
-net1          -0.1978875  0.0266629  -7.422 1.28e-13 ***
-amenities1    -0.0208747  0.0116461  -1.792  0.07310 .  
-log(size)     -0.0361369  0.0074328  -4.862 1.19e-06 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+    (Intercept)    3.1662434  0.0769267  41.159  < 2e-16 ***
+    leasing_rate   0.0042604  0.0003037  14.028  < 2e-16 ***
+    stories        0.0005393  0.0006349   0.849  0.39564    
+    age           -0.0004789  0.0001835  -2.610  0.00908 ** 
+    class_a1       0.3260747  0.0213849  15.248  < 2e-16 ***
+    class_b1       0.1001355  0.0166718   6.006 1.98e-09 ***
+    green_rating1 -0.0257949  0.0179865  -1.434  0.15158    
+    net1          -0.1978875  0.0266629  -7.422 1.28e-13 ***
+    amenities1    -0.0208747  0.0116461  -1.792  0.07310 .  
+    log(size)     -0.0361369  0.0074328  -4.862 1.19e-06 ***
+    ---
+    Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.4285 on 7669 degrees of freedom
-Multiple R-squared:  0.0995,	Adjusted R-squared:  0.09844 
-F-statistic: 94.15 on 9 and 7669 DF,  p-value: < 2.2e-16
-···
+    Residual standard error: 0.4285 on 7669 degrees of freedom
+    Multiple R-squared:  0.0995,	Adjusted R-squared:  0.09844 
+    F-statistic: 94.15 on 9 and 7669 DF,  p-value: < 2.2e-16
 
-···
- size              Rent         leasing_rate       stories            age         class_a  class_b  green_rating
- Min.   :   2378   Min.   :  2.98   Min.   : 10.68   Min.   :  1.00   Min.   :  0.00   0:4544   0:4157   0:6995      
- 1st Qu.:  52000   1st Qu.: 19.50   1st Qu.: 79.51   1st Qu.:  4.00   1st Qu.: 23.00   1:3135   1:3522   1: 684      
- Median : 132417   Median : 25.29   Median : 90.24   Median : 10.00   Median : 34.00                                 
- Mean   : 239465   Mean   : 28.59   Mean   : 84.88   Mean   : 13.83   Mean   : 47.04                                 
- 3rd Qu.: 302375   3rd Qu.: 34.20   3rd Qu.: 96.66   3rd Qu.: 20.00   3rd Qu.: 79.00                                 
- Max.   :3781045   Max.   :250.00   Max.   :100.00   Max.   :110.00   Max.   :187.00                                 
- net      amenities    class          
- 0:7406   0:3548    Length:7679       
- 1: 273   1:4131    Class :character  
-                    Mode  :character  
-···
+
+
+    size              Rent             leasing_rate     stories          age              class_a  class_b  green_rating
+    Min.   :   2378   Min.   :  2.98   Min.   : 10.68   Min.   :  1.00   Min.   :  0.00   0:4544   0:4157   0:6995      
+    1st Qu.:  52000   1st Qu.: 19.50   1st Qu.: 79.51   1st Qu.:  4.00   1st Qu.: 23.00   1:3135   1:3522   1: 684      
+    Median : 132417   Median : 25.29   Median : 90.24   Median : 10.00   Median : 34.00                                 
+    Mean   : 239465   Mean   : 28.59   Mean   : 84.88   Mean   : 13.83   Mean   : 47.04                                 
+    3rd Qu.: 302375   3rd Qu.: 34.20   3rd Qu.: 96.66   3rd Qu.: 20.00   3rd Qu.: 79.00                                 
+    Max.   :3781045   Max.   :250.00   Max.   :100.00   Max.   :110.00   Max.   :187.00
+    
+    net      amenities class          
+    0:7406   0:3548    Length:7679       
+    1: 273   1:4131    Class :character  
+                       Mode  :character  
+
+
 
 Based on stats guru, the size is 250000, greater than the mean, so the extra revenue should be higher. The location is pretty good (just across from downtown), assuming class a, higher rent. So I think there should be more than $2.60 per square foot per year. It is definitely promising investment.
 
@@ -162,38 +162,40 @@ I dropped columns __photo_sharing__ and __religion__ because I think they ust be
 
 * __Creative__ group is the sum of __crafts__ and __art__.
 
-···
-[1] "cluster1's column means"
-         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
-        4.741313         3.667954         7.258687         3.471042         1.976834         2.980695         0.957529 
-        familish             shop            young        spam_user         creative          Cluster 
-        2.745174         2.787645         2.841699         9.081081         1.463320         1.000000 
-[1] "cluster2's column means"
-         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
-       4.4550517       10.3516309       18.0994431        3.8774861        2.3070804        4.1575179        0.9244232 
-        familish             shop            young        spam_user         creative          Cluster 
-       2.3357200        2.5393795        2.5147176        0.1034208        1.1424025        2.0000000 
-[1] "cluster3's column means"
-         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
-       3.9844009        2.9761286        4.1800993        2.1448830        1.3164736        1.6868353        0.5010636 
-        familish             shop            young        spam_user         creative          Cluster 
-       1.4055779        1.9619475        1.5892224        0.1011581        0.7161428        3.0000000 
-[1] "cluster4's column means"
-         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
-       3.9578125        3.8687500        6.4703125        3.3687500        7.2312500        6.2093750        0.8734375 
-        familish             shop            young        spam_user         creative          Cluster 
-       7.6921875        3.4281250        4.5734375        0.1734375        1.7812500        4.0000000 
-[1] "cluster5's column means"
-         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
-       6.2960630        4.3748031        7.7448819        4.1354331        2.1448819       11.4031496        1.2267717 
-        familish             shop            young        spam_user         creative          Cluster 
-       2.5496063       11.4771654        3.3259843        0.1480315        1.5653543        5.0000000 
-[1] "cluster6's column means"
-         chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
-       5.1790698        4.4441860        6.4953488       10.2372093        3.0581395        2.8081395        1.3011628 
-        familish             shop            young        spam_user         creative          Cluster 
-       2.3709302        3.1011628        9.5430233        0.1337209        3.2558140        6.0000000 
-···
+
+
+    [1] "cluster1's column means"
+             chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+            4.741313         3.667954         7.258687         3.471042         1.976834         2.980695         0.957529 
+            familish             shop            young        spam_user         creative          Cluster 
+            2.745174         2.787645         2.841699         9.081081         1.463320         1.000000 
+    [1] "cluster2's column means"
+             chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+           4.4550517       10.3516309       18.0994431        3.8774861        2.3070804        4.1575179        0.9244232 
+            familish             shop            young        spam_user         creative          Cluster 
+           2.3357200        2.5393795        2.5147176        0.1034208        1.1424025        2.0000000 
+    [1] "cluster3's column means"
+             chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+           3.9844009        2.9761286        4.1800993        2.1448830        1.3164736        1.6868353        0.5010636 
+            familish             shop            young        spam_user         creative          Cluster 
+           1.4055779        1.9619475        1.5892224        0.1011581        0.7161428        3.0000000 
+    [1] "cluster4's column means"
+             chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+           3.9578125        3.8687500        6.4703125        3.3687500        7.2312500        6.2093750        0.8734375 
+            familish             shop            young        spam_user         creative          Cluster 
+           7.6921875        3.4281250        4.5734375        0.1734375        1.7812500        4.0000000 
+    [1] "cluster5's column means"
+             chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+           6.2960630        4.3748031        7.7448819        4.1354331        2.1448819       11.4031496        1.2267717 
+            familish             shop            young        spam_user         creative          Cluster 
+           2.5496063       11.4771654        3.3259843        0.1480315        1.5653543        5.0000000 
+    [1] "cluster6's column means"
+             chatter       up_to_date healthy_outgoing            homie           sports           foodie      businessman 
+           5.1790698        4.4441860        6.4953488       10.2372093        3.0581395        2.8081395        1.3011628 
+            familish             shop            young        spam_user         creative          Cluster 
+           2.3709302        3.1011628        9.5430233        0.1337209        3.2558140        6.0000000 
+
+
 
 After running the KMeans clustering model and looking at the statistics of each cluster, there are 6 clusters I got.      
 
